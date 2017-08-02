@@ -25,11 +25,11 @@ Download Skeleton, unzip it and open up the entire folder in a text editor like 
 
 Look for the `<html>, <head>, and <body>` tags.
 
-### Add a title, description and author in the <head>
+### Add a title, description and author in the `<head>`
 
 Take a look around and try to understand what all is being laid out in the `<head>` of your index.html page. Start by adding your title, description and author.
 
-### Add a full-bleed hero image to the <body>
+### Add a full-bleed hero image to the `<body>`
 
 Paste in the following below the `<body>` tag. Link to a large image (ideally over 2,000 pixels wide) in `src=`.
 
@@ -41,7 +41,7 @@ Paste in the following below the `<body>` tag. Link to a large image (ideally ov
   </div>
 ```
 
-### Add content to the <body> 
+### Add content to the `<body>`
 
 Be sure to reference the Skeleton [documentation](http://getskeleton.com/) before adding text willy-nilly. Plan out, ideally by hand, how you want to layout your text, photos, pullquotes and interactive elements.
 
@@ -226,8 +226,3 @@ In **skeleton.css** add the following CSS:
 ```
 
 Refresh the page and check out the subtitle at work. Add a few more "Lorem ipsum" grafs and precede them with a subtitle. As long as it has the `revealScrollhidden scrollReveal` classes, it will animate.  
-
-
-
-
-
