@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Your page title here :)</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+
+  <!-- Scripts
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> 
+<script src="http://aleszu.com/workshops/webdesign/js/scroll.js"></script>
+<script src="http://www.d3plus.org/js/d3.js" charset="utf-8"></script>
+<script src="http://www.d3plus.org/js/d3plus.js"></script>
+
+<script type="text/javascript">
+// load your data
+
+  var sample_data = [
+    {"year": 2001, "name":"concussions", "concussions": 0},
+    {"year": 2002, "name":"concussions", "concussions": 1},
+    {"year": 2003, "name":"concussions", "concussions": 3},
+    {"year": 2004, "name":"concussions", "concussions": 0},
+    {"year": 2005, "name":"concussions", "concussions": 4},
+    {"year": 2006, "name":"concussions", "concussions": 2},
+    {"year": 2007, "name":"concussions", "concussions": 4},
+    {"year": 2008, "name":"concussions", "concussions": 3},
+    {"year": 2009, "name":"concussions", "concussions": 6},
+    {"year": 2010, "name":"concussions", "concussions": 10},
+    {"year": 2011, "name":"concussions", "concussions": 14},
+    {"year": 2012, "name":"concussions", "concussions": 14},
+    {"year": 2013, "name":"concussions", "concussions": 19},
+    {"year": 2014, "name":"concussions", "concussions": 22}
+  ]
+
+   var attributes = [
+    {"name": "concussions", "hex": "#0000ff"}
+  ]
+
+  // instantiate d3plus
+  var visualization = d3plus.viz()
+    .container("#viz")  // container DIV to hold the visualization
+    .data(sample_data)  // data to use with the visualization
+    .type("line")        // visualization type
+    .id("name")         // key for which our data is unique on
+    .text("name")       // key to use for display text
+    .y("concussions")   // key to use for y-axis
+    .x("year")          // key to use for x-axis
+    .attrs(attributes)
+    .color("hex")
+    .draw()             // finally, draw the visualization!
+
+</script>
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+</head>
+<body>
+
+  <!-- Hero image
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div>
+  <img class="u-full-width" src="http://aleszu.com/workshops/webdesign/images/publiceditors-cover.jpg" />
+  </div>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+<div class="container">
+<div class="row">
+<div class="column" style="margin-top: 15%">
+
+<h2 class="revealScrollhidden scrollReveal">“Nit-picking and navel-gazing”</h2>
+
+<p><span class="dropcap">L</span>orem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed maximus mi, sed ullamcorper ante. Vivamus tristique dui eget molestie molestie. Pellentesque ex tortor, eleifend volutpat lorem eu, commodo vulputate erat. Phasellus a nisi mauris. Sed fringilla, nisi sed varius elementum, enim ipsum luctus libero, commodo lacinia quam sem sed felis. Aenean lectus neque, malesuada non dolor a, ultrices pulvinar eros. Aenean id est at sapien lobortis interdum ac eu massa. Nam vulputate sollicitudin erat, a finibus velit fringilla id. Vestibulum massa lorem, finibus vel nunc sed, rhoncus consectetur est. Praesent non urna posuere, auctor ante at, blandit nibh. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse potenti. Aliquam consequat porta quam, sed vulputate est ornare eget.</p>
+
+<p>Maecenas sed felis sit amet nibh efficitur tincidunt. Maecenas in metus facilisis, vulputate est a, volutpat ante. In hac habitasse platea dictumst. Donec quis venenatis tellus, ac varius neque. Suspendisse lacinia, elit vitae ullamcorper vestibulum, justo nisi auctor eros, sit amet elementum dui ex sit amet libero. Nullam fringilla scelerisque pellentesque. Curabitur sodales consequat nulla, sed auctor sem sollicitudin ac. Phasellus quis dui non leo aliquet posuere. Cras posuere sollicitudin magna in rutrum. Quisque eget mi ante. Nullam ullamcorper vitae sem et consectetur.</p>
+
+<div class="u-pull-left">
+    <img class="img-left" src="http://aleszu.com/workshops/webdesign/images/calame.jpg" onmouseover="this.src='http://aleszu.com/workshops/webdesign/images/calame2.jpg'" onmouseout="this.src='http://aleszu.com/workshops/webdesign/images/calame.jpg'" />
+</div>
+
+<p>Pellentesque ullamcorper posuere ex nec malesuada. Cras neque ex, sollicitudin vitae eleifend sed, pellentesque eu sem. Vivamus egestas tincidunt mi. Vivamus id libero id lorem varius faucibus. Integer lacus ligula, aliquet imperdiet hendrerit vel, congue nec mauris. Maecenas eu maximus purus. Fusce id feugiat est, eget convallis lorem. Ut semper sapien aliquet tristique semper. Maecenas ornare lacinia leo, sit amet interdum augue sollicitudin vitae. Vestibulum malesuada purus at molestie maximus.</p>
+
+<p>Phasellus non faucibus turpis, vitae placerat erat. Donec vestibulum dapibus lacus a rutrum. Etiam eget elementum justo. Sed nec est eu lectus placerat consectetur. Fusce a dapibus quam, vitae facilisis mauris. Donec volutpat sit amet sapien a rutrum. Morbi vitae aliquam nisl. Morbi suscipit congue velit ac laoreet. Phasellus egestas ipsum tortor, in laoreet urna dictum et. Suspendisse eget purus at ante sollicitudin varius. Pellentesque iaculis efficitur fermentum. Pellentesque porta faucibus tellus sed facilisis. Nunc dignissim neque in nibh porttitor eleifend. Proin id tortor eleifend, aliquam diam rutrum, convallis metus. Curabitur sed facilisis dui. Morbi nulla quam, rhoncus sed tempor non, lobortis posuere nulla.</p>
+
+<p>Nam vestibulum eu sem eget tempor. Nunc volutpat convallis ullamcorper. Sed lobortis elementum sollicitudin. Vivamus vestibulum pulvinar velit eu volutpat. Sed id dictum sem. Nam mollis suscipit mauris, laoreet interdum odio laoreet in. In accumsan auctor ante. Etiam consectetur, lacus at maximus convallis, libero sem tincidunt est, at viverra turpis dolor a diam. Maecenas eros nisi, aliquet sed felis eget, faucibus feugiat libero. Pellentesque consectetur, sapien vel facilisis posuere, leo diam rhoncus leo, eget pellentesque turpis nunc ut nisl.</p>
+
+<p>Pellentesque ullamcorper posuere ex nec malesuada. Cras neque ex, sollicitudin vitae eleifend sed, pellentesque eu sem. Vivamus egestas tincidunt mi. Vivamus id libero id lorem varius faucibus. Integer lacus ligula, aliquet imperdiet hendrerit vel, congue nec mauris. Maecenas eu maximus purus. Fusce id feugiat est, eget convallis lorem. Ut semper sapien aliquet tristique semper. Maecenas ornare lacinia leo, sit amet interdum augue sollicitudin vitae. Vestibulum malesuada purus at molestie maximus.</p>
+
+<br>
+<br>
+<h2 class="revealScrollhidden scrollReveal">“Typewriters are cool”</h2>
+
+<p>Phasellus non faucibus turpis, vitae placerat erat. Donec vestibulum dapibus lacus a rutrum. Etiam eget elementum justo. Sed nec est eu lectus placerat consectetur. Fusce a dapibus quam, vitae facilisis mauris. Donec volutpat sit amet sapien a rutrum. Morbi vitae aliquam nisl. Morbi suscipit congue velit ac laoreet. Phasellus egestas ipsum tortor, in laoreet urna dictum et. Suspendisse eget purus at ante sollicitudin varius. Pellentesque iaculis efficitur fermentum. Pellentesque porta faucibus tellus sed facilisis. Nunc dignissim neque in nibh porttitor eleifend. Proin id tortor eleifend, aliquam diam rutrum, convallis metus. Curabitur sed facilisis dui. Morbi nulla quam, rhoncus sed tempor non, lobortis posuere nulla.</p>
+
+<p>Pellentesque ullamcorper posuere ex nec malesuada. Cras neque ex, sollicitudin vitae eleifend sed, pellentesque eu sem. Vivamus egestas tincidunt mi. Vivamus id libero id lorem varius faucibus. Integer lacus ligula, aliquet imperdiet hendrerit vel, congue nec mauris. Maecenas eu maximus purus. Fusce id feugiat est, eget convallis lorem. Ut semper sapien aliquet tristique semper. Maecenas ornare lacinia leo, sit amet interdum augue sollicitudin vitae. Vestibulum malesuada purus at molestie maximus.</p>
+
+<p>Phasellus non faucibus turpis, vitae placerat erat. Donec vestibulum dapibus lacus a rutrum. Etiam eget elementum justo. Sed nec est eu lectus placerat consectetur. Fusce a dapibus quam, vitae facilisis mauris. Donec volutpat sit amet sapien a rutrum. Morbi vitae aliquam nisl. Morbi suscipit congue velit ac laoreet. Phasellus egestas ipsum tortor, in laoreet urna dictum et. Suspendisse eget purus at ante sollicitudin varius. Pellentesque iaculis efficitur fermentum. Pellentesque porta faucibus tellus sed facilisis. Nunc dignissim neque in nibh porttitor eleifend. Proin id tortor eleifend, aliquam diam rutrum, convallis metus. Curabitur sed facilisis dui. Morbi nulla quam, rhoncus sed tempor non, lobortis posuere nulla.</p>
+
+<div id="viz" style="width:600px; height:400px;"></div>
+
+<p>Phasellus non faucibus turpis, vitae placerat erat. Donec vestibulum dapibus lacus a rutrum. Etiam eget elementum justo. Sed nec est eu lectus placerat consectetur. Fusce a dapibus quam, vitae facilisis mauris. Donec volutpat sit amet sapien a rutrum. Morbi vitae aliquam nisl. Morbi suscipit congue velit ac laoreet. Phasellus egestas ipsum tortor, in laoreet urna dictum et. Suspendisse eget purus at ante sollicitudin varius. Pellentesque iaculis efficitur fermentum. Pellentesque porta faucibus tellus sed facilisis. Nunc dignissim neque in nibh porttitor eleifend. Proin id tortor eleifend, aliquam diam rutrum, convallis metus. Curabitur sed facilisis dui. Morbi nulla quam, rhoncus sed tempor non, lobortis posuere nulla.</p>
+
+<p>Pellentesque ullamcorper posuere ex nec malesuada. Cras neque ex, sollicitudin vitae eleifend sed, pellentesque eu sem. Vivamus egestas tincidunt mi. Vivamus id libero id lorem varius faucibus. Integer lacus ligula, aliquet imperdiet hendrerit vel, congue nec mauris. Maecenas eu maximus purus. Fusce id feugiat est, eget convallis lorem. Ut semper sapien aliquet tristique semper. Maecenas ornare lacinia leo, sit amet interdum augue sollicitudin vitae. Vestibulum malesuada purus at molestie maximus.</p>
+
+<p>Phasellus non faucibus turpis, vitae placerat erat. Donec vestibulum dapibus lacus a rutrum. Etiam eget elementum justo. Sed nec est eu lectus placerat consectetur. Fusce a dapibus quam, vitae facilisis mauris. Donec volutpat sit amet sapien a rutrum. Morbi vitae aliquam nisl. Morbi suscipit congue velit ac laoreet. Phasellus egestas ipsum tortor, in laoreet urna dictum et. Suspendisse eget purus at ante sollicitudin varius. Pellentesque iaculis efficitur fermentum. Pellentesque porta faucibus tellus sed facilisis. Nunc dignissim neque in nibh porttitor eleifend. Proin id tortor eleifend, aliquam diam rutrum, convallis metus. Curabitur sed facilisis dui. Morbi nulla quam, rhoncus sed tempor non, lobortis posuere nulla.</p>
+
+</div>
+</div>
+</div>
+
+
+
+  
+  </div>
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>
