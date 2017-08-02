@@ -118,11 +118,114 @@ Now, if you add the "dropcap" class to a `<span>` element, you can apply this st
 
 # Coding a couple of gizmos using CSS, jQuery and D3plus
 
-### Adding a CSS animation
+### Adding a basic animation
+
+As a proof of concept, let's add a left-floated image that is replaced with another image when the user hovers a mouse over it. Using `onmouseover` and `onmouseout` in the `<img>` tag, we point to the two images. 
+
+```
+<div class="u-pull-left">
+    <img class="img-left" src="http://aleszu.com/workshops/webdesign/images/calame.jpg" onmouseover="this.src='http://aleszu.com/workshops/webdesign/images/calame2.jpg'" onmouseout="this.src='http://aleszu.com/workshops/webdesign/images/calame.jpg'" />
+</div>
+```
+
+The `u-pull-left` class is from Skeleton and will float the image to the left. The `img-left` class is a custom one we've added. Let's customize the size of the image using that class. Add this to your **skeleton.css** file. 
+
+```
+.img-left{
+  width: 400px;
+  padding: 10px 50px 0px 30px;
+}
+```  
+
+Refresh the page and see your simple animation take effect. 
 
 ### Adding a jQuery element
 
-### Adding a D3plus graphic
+Let's add a typewriter-style animation using jQuery. First, add the following subtitle (using the `<h2>` header tags) above the first paragraph. Notice the subtitle “Nit-picking and navel-gazing” has two classes assigned to it.
+
+```
+<h2 class="revealScrollhidden scrollReveal">“Nit-picking and navel-gazing”</h2>
+```
+
+#### Write the custom script
+
+Now, open up a new file in your text editor. Paste the following script in and save it as **scroll.js**, storing it in a new folder called "js" withing your main Skeleton directory.
+
+```
+$(window).scroll(function () {
+    $('.scrollReveal').each(function () {
+        var imagePos = $(this).offset().top - 310;
+        var imageHeight = $(this).height();
+        var topOfWindow = $(window).scrollTop();
+        if (imagePos < topOfWindow + imageHeight && imagePos + imageHeight > topOfWindow) {
+            $(this).addClass("typewriter");
+        } 
+    });
+});
+```
+
+What is this script doing? It applies the typewriter class to any element already containing the "scrollReveal" class, which in our case is a subtitle `<h2>`. The script also only executes the function if the user has scrolled to a specific position, which is a distant from the top of the viewing window. In other words, the script will only trigger once that position has been reached. (This also ensures all subsequent subtitles will only be triggered once they are reached, as opposed to all being triggered once the page is loaded.) 
+
+#### Call the jQuery
+
+Next, call the jQuery in the `<head>`. We'll need that to run the jQuery we're about to include. 
+
+```
+<!-- Scripts
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> 
+```
+
+#### Call the script
+
+Call that **scroll.js** script in the `<head>` of your index.html.
+
+```
+<!-- Scripts
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> 
+<script src="js/scroll.js"></script>
+```
+
+#### Add the CSS
+
+In **skeleton.css** add the following CSS:
+
+```
+/* Typewriter effect */
+
+.revealScrollhidden {
+   visibility: hidden;
+}
+
+.typewriter {
+  visibility: visible;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid black; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  margin-bottom: 2rem;
+  font-family: Baskerville, 'Baskerville Old Face', 'Hoefler Text', Garamond, 'Times New Roman', serif;
+  font-size: 4.0rem; 
+  font-weight: bold;
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: black; }
+}
+```
+
+Refresh the page and check out the subtitle at work. Add a few more "Lorem ipsum" grafs and precede them with a subtitle. As long as it has the `revealScrollhidden scrollReveal` classes, it will animate.  
 
 
 
