@@ -226,3 +226,105 @@ In **skeleton.css** add the following CSS:
 ```
 
 Refresh the page and check out the subtitle at work. Add a few more "Lorem ipsum" grafs and precede them with a subtitle. As long as it has the `revealScrollhidden scrollReveal` classes, it will animate.  
+
+### Adding an interactive chart
+
+[Highcharts.js](https://www.highcharts.com) is becoming a popular [alternative](http://www.storybench.org/seattles-kcts9-building-digital-first-newsroom-culture/) to [D3js](d3js.org) in [newsrooms](https://www.pri.org/stories/2017-07-14/more-75-percent-terrorist-attacks-2016-took-place-just-10-countries) around the country, though it requires a license and therefore is not free. 
+
+We'll insert a highcharts [demo](https://www.highcharts.com/demo/line-time-series) whose text I've messed around with.  
+
+#### Call the highcharts libraries
+
+Call these two highcharts libraries in the `<head>` of index.html.
+
+```
+<!-- Scripts
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="http://aleszu.com/workshops/webdesign/js/scroll.js"></script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+```
+
+#### Insert the `<div>` that will hold the chart
+
+Add some more paragraphs of dummy text and insert the following `<div>`. Notice that we're defining some dimensions and adding a 50px bottom-margin. So the text isn't scrunched up against the chart.
+
+```
+<div id="container" style="min-width: 310px; height: 400px; margin: 0 0 50px 0"></div>
+```
+
+#### Add the javascript
+
+Directly into the close `</body>` tag, add this script:
+
+```
+<script type="text/javascript">
+
+$.getJSON('https://www.highcharts.com/samples/data/jsonp.php?filename=usdeur.json&callback=?', function (data) {
+
+    Highcharts.chart('container', {
+        chart: {
+            zoomType: 'x'
+        },
+        title: {
+            text: 'New York Times digital subscribers'
+        },
+        subtitle: {
+       //     text: document.ontouchstart === undefined ?
+       //             'Click and drag in the plot area to zoom in' : 'Pinch the chart to zoom in'
+        },
+        xAxis: {
+            type: 'datetime'
+        },
+        yAxis: {
+            title: {
+                text: 'Million subscribers'
+            }
+        },
+        legend: {
+            enabled: false
+        },
+        plotOptions: {
+            area: {
+                fillColor: {
+                    linearGradient: {
+                        x1: 0,
+                        y1: 0,
+                        x2: 0,
+                        y2: 1
+                    },
+                    stops: [
+                        [0, Highcharts.getOptions().colors[0]],
+                        [1, Highcharts.Color(Highcharts.getOptions().colors[0]).setOpacity(0).get('rgba')]
+                    ]
+                },
+                marker: {
+                    radius: 2
+                },
+                lineWidth: 1,
+                states: {
+                    hover: {
+                        lineWidth: 1
+                    }
+                },
+                threshold: null
+            }
+        },
+
+        series: [{
+            type: 'area',
+            name: 'Subscribers',
+            data: data
+        }]
+    });
+});
+
+</script>
+```
+
+Refresh the page. Voila! 
+
+
+
+
