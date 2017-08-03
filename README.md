@@ -116,7 +116,7 @@ Now, if you add the "dropcap" class to a `<span>` element, you can apply this st
 
 ![dropcap](http://aleszu.com/workshops/webdesign/images/dropcap.png)
 
-# Coding a couple of gizmos using CSS, jQuery and D3plus
+# Coding a couple of gizmos using CSS, jQuery and Highcharts.js
 
 ### Adding a basic animation
 
