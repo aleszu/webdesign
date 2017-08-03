@@ -256,7 +256,7 @@ Add some more paragraphs of dummy text and insert the following `<div>`. Notice 
 
 #### Add the javascript
 
-Directly into the close `</body>` tag, add this script:
+Directly before the close `</body>` tag, add this script:
 
 ```
 <script type="text/javascript">
