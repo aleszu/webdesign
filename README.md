@@ -29,32 +29,23 @@ Look for the `<html>, <head>, and <body>` tags.
 
 Take a look around and try to understand what all is being laid out in the `<head>` of your index.html page. Start by adding your title, description and author.
 
-### Add a full-bleed hero image to the `<body>`
+### Add a full-bleed hero image and then overlay text
 
-Paste in the following below the `<body>` tag. Link to a large image (ideally over 2,000 pixels wide) in `src=`.
-
-```
-  <!-- Hero image
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div>
-  <img class="u-full-width" src="http://aleszu.com/workshops/webdesign/images/publiceditors-cover.jpg" />
-  </div>
-```
-
-### Add text over the image
-
-What if we wanted to add the text with HTML and CSS? 
+Paste in the following just before the `<div class="container">` tag. Link to a large image (ideally over 2,000 pixels wide) in `src=`.
 
 ```
-# Add to HTML
-
 <div class="hero">
+    <img src="http://aleszu.com/workshops/webdesign/images/hero.jpg" style="width:100%" />
+  <div class="hero-text">
     <h1>Big Bold Headline</h1>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    <img src="http://aleszu.com/workshops/webdesign/images/hero.jpg" />
+  </div>  
 </div>
+```
 
-# Add to CSS
+To style the text, add this to the *skeleton.css*. 
+
+```
 
 .hero-text h1{
   font-size: 4.1em;
