@@ -70,20 +70,6 @@ To style the text, add this to the *skeleton.css*.
   z-index: 1;
 }
 
-# Important "media queries" to make this responsive 
-
-@media all and (max-width: 768px) {
-  .hero-text h1{
-    font-size: 8vw;
-    top: 13vw;
-  }
-  .hero-text p{
-    font-size: 3vw;
-    top: 27vw;
-  }
- 
-}
-
 ``` 
 
 ### Add content to the `<body>`
