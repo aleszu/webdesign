@@ -43,13 +43,13 @@ Paste in the following just before the `<div class="container">` tag. Link to a 
 </div>
 ```
 
-To style the text, add this to the *skeleton.css*. 
+To style the text, add this to the *skeleton.css*. It's good practice to include a full font stack in case the browser can't render your first choice.
 
 ```
 
 .hero-text h1{
   color: #e0e0eb;
-  font-family: Baskerville, serif;
+  font-family: Baskerville, "Baskerville Old Face", "Goudy Old Style", Garamond, "Times New Roman", serif;
   font-size: 4.1em;
   margin: auto;
   position: absolute; 
@@ -64,7 +64,7 @@ To style the text, add this to the *skeleton.css*.
 .hero-text p{
   font-size: 1.5em;
   color: #e0e0eb;
-  font-family: Baskerville, serif;
+  font-family: Baskerville, "Baskerville Old Face", "Goudy Old Style", Garamond, "Times New Roman", serif;
   margin: auto;
   position: absolute; 
   text-align: center; 
