@@ -43,7 +43,7 @@ Paste in the following just before the `<div class="container">` tag. Link to a 
 </div>
 ```
 
-To style the text, add this to the *skeleton.css*. It's good practice to include a full font stack in case the browser can't render your first choice.
+To style the text, add this to the **skeleton.css**. It's good practice to include a full font stack in case the browser can't render your first choice.
 
 ```
 
