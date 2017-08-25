@@ -3,9 +3,9 @@ Northeastern University's Media Innovation program
 
 ### The skills we’ll be covering
 
-⋅⋅*How to get started with a HTML/CSS framework (standalone interactives like [What Would It Take To Turn Red States Blue? from FiveThirtyEight](https://projects.fivethirtyeight.com/2016-swing-the-election/), [Undue Force from the Baltimore Sun](http://data.baltimoresun.com/news/police-settlements/) and [Spies in the Skies from BuzzFeed](https://www.buzzfeed.com/peteraldhous/spies-in-the-skies?utm_term=.hhenRxQPy1#.kgP31Xg2No) are built with custom code outside of the regular CMSs.) Knowing how to code that up is essential if you want to add interactivity to your story. 
+*How to get started with a HTML/CSS framework (standalone interactives like [What Would It Take To Turn Red States Blue? from FiveThirtyEight](https://projects.fivethirtyeight.com/2016-swing-the-election/), [Undue Force from the Baltimore Sun](http://data.baltimoresun.com/news/police-settlements/) and [Spies in the Skies from BuzzFeed](https://www.buzzfeed.com/peteraldhous/spies-in-the-skies?utm_term=.hhenRxQPy1#.kgP31Xg2No) are built with custom code outside of the regular CMSs.) Knowing how to code that up is essential if you want to add interactivity to your story. 
 
-⋅⋅*How to envision and code a small menu of CSS animations and jQuery elements. This is the fun stuff: transitions, scroll-based animations, reveals, hovers, etc. Ever wonder how [The Pudding](https://pudding.cool) works? We’ll get you started coding these little gizmos. 
+*How to envision and code a small menu of CSS animations and jQuery elements. This is the fun stuff: transitions, scroll-based animations, reveals, hovers, etc. Ever wonder how [The Pudding](https://pudding.cool) works? We’ll get you started coding these little gizmos. 
 
 *We all have different levels of experience with HTML, CSS and Javascript. The goal of this bootcamp is to get us all roughly on the same page.*
 
@@ -40,6 +40,60 @@ Paste in the following below the `<body>` tag. Link to a large image (ideally ov
   <img class="u-full-width" src="http://aleszu.com/workshops/webdesign/images/publiceditors-cover.jpg" />
   </div>
 ```
+
+### Add text over the image
+
+What if we wanted to add the text with HTML and CSS? 
+
+```
+# Add to HTML
+
+<div class="hero">
+    <h1>Big Bold Headline</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <img src="http://aleszu.com/workshops/webdesign/images/hero.jpg" />
+</div>
+
+# Add to CSS
+
+.hero-text h1{
+  font-size: 4.1em;
+  margin: auto;
+  position: absolute; 
+  text-align: center; 
+  top: 220px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+.hero-text p{
+  font-size: 1.5em;
+  margin: auto;
+  position: absolute; 
+  text-align: center; 
+  top: 320px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+# Important "media queries" to make this responsive 
+
+@media all and (max-width: 768px) {
+  .hero-text h1{
+    font-size: 8vw;
+    top: 13vw;
+  }
+  .hero-text p{
+    font-size: 3vw;
+    top: 27vw;
+  }
+ 
+}
+
+``` 
 
 ### Add content to the `<body>`
 
@@ -116,7 +170,7 @@ Now, if you add the "dropcap" class to a `<span>` element, you can apply this st
 
 ![dropcap](http://aleszu.com/workshops/webdesign/images/dropcap.png)
 
-# Coding a couple of gizmos using CSS, jQuery and Highcharts.js
+# Coding a couple of gizmos using CSS, jQuery and D3plus
 
 ### Adding a basic animation
 
@@ -256,7 +310,7 @@ Add some more paragraphs of dummy text and insert the following `<div>`. Notice 
 
 #### Add the javascript
 
-Directly before the close `</body>` tag, add this script:
+Directly into the close `</body>` tag, add this script:
 
 ```
 <script type="text/javascript">
