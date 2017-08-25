@@ -48,22 +48,27 @@ To style the text, add this to the *skeleton.css*.
 ```
 
 .hero-text h1{
+  color: #e0e0eb;
+  font-family: Baskerville, serif;
   font-size: 4.1em;
   margin: auto;
   position: absolute; 
   text-align: center; 
-  top: 220px;
+  top: 360px;
   left: 0;
   right: 0;
   bottom: 0;
   z-index: 1;
 }
+
 .hero-text p{
   font-size: 1.5em;
+  color: #e0e0eb;
+  font-family: Baskerville, serif;
   margin: auto;
   position: absolute; 
   text-align: center; 
-  top: 320px;
+  top: 420px;
   left: 0;
   right: 0;
   bottom: 0;
@@ -71,6 +76,12 @@ To style the text, add this to the *skeleton.css*.
 }
 
 ``` 
+
+### Preview the page
+
+Open the index.html from your Skeleton folder in a browser to preview the page you've been building.
+
+![image](http://aleszu.com/workshops/webdesign/images/overlaytext.png)
 
 ### Add content to the `<body>`
 
@@ -99,10 +110,6 @@ Notice that we're adding paragraph tags to denote the beginning and end of the g
 </div>
 </div>
 ``` 
-
-### Preview the page
-
-Open the index.html from your Skeleton folder in a browser to preview the page you've been building.
 
 ### Change the body font
 
