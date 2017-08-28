@@ -177,6 +177,8 @@ The `u-pull-left` class is from Skeleton and will float the image to the left. T
 
 Refresh the page and see your simple animation take effect. 
 
+Note: Rollover animations should be used with caution or "shouted out" with an annotation or UI design element because, as Archie Tse of *The New York Times* [has said](https://github.com/archietse/malofiej-2016/blob/master/tse-malofiej-2016-slides.pdf): "If you make a tooltip or rollover, assume no one will ever see it. If content is important for readers to see, don't hide it."
+
 ### Adding a jQuery element
 
 Let's add a typewriter-style animation using jQuery. First, add the following subtitle (using the `<h2>` header tags) above the first paragraph. Notice the subtitle “Nit-picking and navel-gazing” has two classes assigned to it.
